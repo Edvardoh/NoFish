@@ -1,0 +1,33 @@
+<div class="user-profile-view card-container">
+	<h1><%= user.firstname %> <%= user.lastname %></h1>
+  <hr>
+	<h3>Username: <%= user.username %></h3>
+	<h3>Contact: <%= user.email %></h3>
+	<div class="logout-btn ui button">Logout</div>
+
+  <!--admin users-->
+  <% if(user.isadmin) {%>
+    <div class="show-users-btn ui button">Show Users</div>
+    <div class="users-list-view"></div>
+  <% }%>
+</div>
+
+<!-- confirmation modal -->
+<div class="ui small modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Logout
+    </div>
+    <div class="content">
+      <p>Are you sure you want to log out?</p>
+    </div>
+    <div class="actions">
+      <div class="ui negative button">
+        No
+      </div>
+      <div class="logout-confirm-btn ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>

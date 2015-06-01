@@ -1,0 +1,26 @@
+<!--This user list can be injected onto a page using ajax-->
+
+<h3>Users</h3>
+<table class="ui table">
+	<thead>
+		<th>User ID</th>
+		<th>Username</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Admin</th>
+	</thead>
+
+	<% _.each(users, function(user) { %>
+		<tr data-id="<%= user.id %>" data-model="user">
+			<td><%= user.id %></td>
+			<td><%= user.username %></td>
+			<td><%= user.firstname %> <%= user.lastname %></td>
+			<td><%= user.email %></td>
+			<td>
+				<% if(user.isadmin) { %>
+					<i class="checkmark icon"></i>
+				<% } %>
+			</td>
+		</tr>
+	<% }) %>
+</table>
