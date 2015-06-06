@@ -1,5 +1,16 @@
 angular.module('DashboardModule').controller('DashboardController', ['$scope', function($scope) {
-	
+	$scope.viewTimeline = function() {
+		debugger;
+	};
+
+	$scope.viewReservations = function() {
+		debugger;
+	};
+
+	$scope.viewPerformance = function() {
+		debugger;
+	};
+
 	//TODO dummy data
 	$scope.feed = [{
 			cardType: 'event',

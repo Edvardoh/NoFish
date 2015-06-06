@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': 'PageController.showHomePage'
+  '/': 'PageController.showHomePage',
 
   // '/dashboard': 'DashboardController.show' TODO
 

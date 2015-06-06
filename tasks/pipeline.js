@@ -27,11 +27,14 @@ var jsFilesToInject = [
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 
-  // Dependencies like jQuery, or Angular are brought in here
+  // Dependencies for the dependencies
+  'js/dependencies/jquery-2.1.3.js',
+  'semantic-ui/semantic.js',
+
+  // Bring in the remining dependencies
   'js/dependencies/**/*.js',
 
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
+  // Inject remaining client-side js files
   'js/public/MainModule.js',
   'js/private/DashboardModule.js',
   'js/**/*.js',

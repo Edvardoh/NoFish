@@ -24,13 +24,13 @@ module.exports = {
 				return res.view('main');
 			}
 			console.log(user.id);
-			return res.view('dashboard', {
+			return res.view('timeline', {
 				me: {
 					id: user.id,
 					name: user.name,
 					isAdmin: user.isAdmin
 				},
-				layout: 'private'
+				layout: 'dashboard'
 			});
 		});
 	}

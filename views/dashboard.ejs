@@ -1,15 +1,73 @@
-<div class="card-container">
-  <div ng-repeat="item in feed" class="ui card">
-    <div class="content">
-      <div class="header">
-        {{item.cardHeader}}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NoFish</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/semantic-ui/semantic.css">
+    <!--STYLES END-->
+
+    <!-- bring sails local vars onto page -->
+    <script type="text/javascript">
+      window.SAILS_LOCALS = {
+        _csrf: '<%= _csrf %>',
+        me: <%- JSON.stringify(me) %>
+      };
+    </script>
+
+  </head>
+
+  <body class="menu pushable" ng-app="DashboardModule" ng-controller="DashboardController" ng-cloak >
+    
+    <!-- Sidebar Menu (using angularify.semantic.sidebar)-->
+    <sidebar button-class="#open-sidebar-btn">
+      <sidebar-link icon="tasks icon" title="Timeline" href="#/timeline"></sidebar-link>
+      <sidebar-link icon="suitcase icon" title="Reservations" href="#/reservations"></sidebar-link>
+      <sidebar-link icon="heartbeat icon" title="Performance" href="#/performance"></sidebar-link>
+    </sidebar>
+    <!-- Sidebar Menu End-->
+
+    <!-- Main Content -->
+    <div class="pusher">
+      <div class="dashboard-menu ui menu inverted">
+        <a id="open-sidebar-btn" class="item">
+          <i class="content icon"></i> 
+        </a>
+        <span class="item">
+          LeanBnB
+        </span>
+        <a class="logout item" href="/session/destroy">
+          <i class="sign out icon"></i>
+          logout
+        </a>
       </div>
-      <div class="meta">
-        {{item.cardType}}
-      </div>
-      <div>
-        {{item.cardDescription}}
-      </div>
+
+      <div ng-view></div>
+
     </div>
-  </div>
-</div>
+    <!-- Main Content End-->
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/jquery-2.1.3.js"></script>
+    <script src="/semantic-ui/semantic.js"></script>
+    <script src="/js/dependencies/angular-1.3.js"></script>
+    <script src="/js/dependencies/angular-route.js"></script>
+    <script src="/js/dependencies/angular-semantic-ui.js"></script>
+    <script src="/js/public/MainModule.js"></script>
+    <script src="/js/private/DashboardModule.js"></script>
+    <script src="/js/private/DashboardController.js"></script>
+    <script src="/js/public/MainController.js"></script>
+    <script src="/js/script.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
