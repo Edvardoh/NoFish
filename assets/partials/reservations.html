@@ -1,0 +1,36 @@
+<div class="grid-toolbar">
+	<button ng-click="addReservation()" class="ui icon button">
+		<i class="green add circle icon"></i>
+		Add Reservation
+	</button>
+</div>
+<div ui-grid="{ data: reservationsData }" class="reservations-grid"></div>
+
+ <modal ng-model="show_modal">
+    <i class="close icon" ng-click="close_modal()"></i>
+    <div class="header">
+      Add New Reservation
+    </div>
+    <div class="content">
+      
+    	<form ng-submit="submitReservationForm()" class="add-reservation-form ui form">
+			<div>
+				<label for="username">Reservation Source:</label>
+				<input ng-model="reservationForm.source" type="text" name="source"/>
+			</div>
+			<div>
+				<label for="password">Guest Name:</label>
+				<input ng-model="reservationForm.guest_name" type="text" name="guest_name"/>
+			</div>
+
+			<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+		</form>
+
+    </div>
+    <div class="actions">
+	    <div class="ui positive right labeled icon button">
+	      Add
+	      <i class="checkmark icon"></i>
+	    </div>
+    </div>
+</modal>

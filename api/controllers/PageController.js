@@ -24,7 +24,7 @@ module.exports = {
 				return res.view('main');
 			}
 			console.log(user.id);
-			return res.view('timeline', {
+			return res.view('dashboard',{ //TODO the first arg is meaningless, since the dashboard layout doesn't inject a view into it..
 				me: {
 					id: user.id,
 					name: user.name,

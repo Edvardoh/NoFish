@@ -29,12 +29,10 @@ module.exports.routes = {
   *                                                                          *
   * (Alternatively, remove this and add an `index.html` file in your         *
   * `assets` directory)                                                      *
-  *                                                                          *
+  *                             http://localhost:1337/partials/timeline.html                                             *
   ***************************************************************************/
 
-  '/': 'PageController.showHomePage',
-
-  // '/dashboard': 'DashboardController.show' TODO
+  '/': 'PageController.showHomePage'
 
   /***************************************************************************
   *                                                                          *
