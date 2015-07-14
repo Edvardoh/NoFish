@@ -11,26 +11,42 @@
     <div class="header">
       Add New Reservation
     </div>
-    <div class="content">
       
-    	<form ng-submit="submitReservationForm()" class="add-reservation-form ui form">
+    <form ng-submit="submitReservationForm()" class="reservation-form ui form">
 			<div>
-				<label for="username">Reservation Source:</label>
-				<input ng-model="reservationForm.source" type="text" name="source"/>
+				<label >Reservation Source:</label>
+				<input ng-model="reservationForm.reservation_source" type="text" name="source"/>
 			</div>
 			<div>
-				<label for="password">Guest Name:</label>
+				<label >Guest Name:</label>
 				<input ng-model="reservationForm.guest_name" type="text" name="guest_name"/>
+			</div>
+			<div>
+				<label >Property Name:</label>
+				<input ng-model="reservationForm.property_name" type="text" name="property_name"/>
+			</div>
+			<div>
+				<label >Bed ID:</label>
+				<input ng-model="reservationForm.bed_id" type="text" name="bed_id"/>
+			</div>
+			<div>
+				<label >Key Code:</label>
+				<input ng-model="reservationForm.key_code" type="text" name="key_code"/>
+			</div>
+			<div>
+				<label >Check In:</label>
+				<input ng-model="reservationForm.check_in" type="text" name="check_in"/>
+			</div>
+			<div>
+				<label >Check Out:</label>
+				<input ng-model="reservationForm.check_out" type="text" name="check_out"/>
+			</div>
+			<div>
+				<label >Price:</label>
+				<input ng-model="reservationForm.total_price" type="text" name="total_price"/>
 			</div>
 
 			<input type="hidden" name="_csrf" value="<%= _csrf %>" />
-		</form>
-
-    </div>
-    <div class="actions">
-	    <div class="ui positive right labeled icon button">
-	      Add
-	      <i class="checkmark icon"></i>
-	    </div>
-    </div>
+		    <input type="submit" class="ui positive right button" value="Add"/>
+   	</form>
 </modal>

@@ -64,6 +64,7 @@ module.exports = {
 		User.find(function foundUsers(err, users) {
 			if(err) return next(err);
 			// if no error, display the /users/list view
+
 			res.view({
 				users: users,
 				layout: null

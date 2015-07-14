@@ -3,9 +3,7 @@ angular.module('MainModule').controller('MainController', ['$scope', '$http', fu
 		authenticated: false
 	};
 
-	$scope.loginForm = {
-
-	};
+	$scope.loginForm = {};
 
 	$scope.submitLoginForm = function() {
 		$http.put('/session/create', {

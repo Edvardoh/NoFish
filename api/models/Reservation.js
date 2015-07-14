@@ -19,6 +19,10 @@ module.exports = {
   			type: 'string'
   		},
 
+      property_name: {
+        type: 'string'
+      },
+
   		guest_name: {
   			type: 'string'
   		},
