@@ -16,9 +16,6 @@ angular.module('DashboardModule').controller('ReservationsController', ['$scope'
 	};
 
 	$scope.addReservation = function() {
-		//debugger;
-		//TODO just dummy content in the modal.
-
 		$scope.show_modal = true;
 
 	    $scope.close_modal = function(){
