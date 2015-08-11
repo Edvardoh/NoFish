@@ -7,61 +7,61 @@
 
 module.exports = {
 
-	schema: true,
+	//schema: true,
+  autoPK: true,
+	attributes: {
+		
+		id: {
+			type: 'integer'
+		},
 
-  	attributes: {
-  		
-  		id: {
-  			type: 'integer'
-  		},
+		reservation_source: {
+			type: 'string'
+		},
 
-  		reservation_source: {
-  			type: 'string'
-  		},
+    property_name: {
+      type: 'string'
+    },
 
-      property_name: {
-        type: 'string'
-      },
+		guest_name: {
+			type: 'string'
+		},
 
-  		guest_name: {
-  			type: 'string'
-  		},
+		confirmation_code: {
+			type: 'integer'
+		},
 
-  		confirmation_code: {
-  			type: 'integer'
-  		},
+		key_code: {
+			type: 'integer'
+		},
 
-  		key_code: {
-  			type: 'integer'
-  		},
+		bed_id: {
+			type: 'string'
+		},
 
-  		bed_id: {
-  			type: 'string'
-  		},
+		itinerary_url: {
+			type: 'string'
+		},
 
-  		itinerary_url: {
-  			type: 'string'
-  		},
+		listing_url: {
+			type: 'string'
+		},
 
-  		listing_url: {
-  			type: 'string'
-  		},
+		check_in: {
+			type: 'date'
+		},
 
-  		check_in: {
-  			type: 'date'
-  		},
+		check_out: {
+			type: 'date'
+		},
 
-  		check_out: {
-  			type: 'date'
-  		},
+		service_fee: {
+			type: 'integer'
+		},
 
-  		service_fee: {
-  			type: 'integer'
-  		},
-
-  		total_price: {
-  			type: 'integer'
-  		}
-  	}
+		total_price: {
+			type: 'integer'
+		}
+	}
 };
 

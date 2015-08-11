@@ -36,7 +36,9 @@ module.exports = {
 			var reservationList = [];
 
 			for (var i=0; i<reservations.length; i++) {
+				console.log(JSON.stringify(reservations[i])); //TODO
 				reservationList.push({
+					id: reservations[i].id,
 					guest: reservations[i].guest_name,
 					property: reservations[i].reservation_source,
 					source: reservations[i].reservation_source,
@@ -49,6 +51,14 @@ module.exports = {
 			}
 			return res.json(reservationList);
 		});
+	},
+
+	destroy: function(req, res) {
+		console.log('reservation/destroy'); //TODO
+
+		var params = req.params.all();
+
+		//Reservation.destroy()
 	}
 	
 };

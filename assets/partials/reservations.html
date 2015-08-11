@@ -4,7 +4,7 @@
 		Add Reservation
 	</button>
 </div>
-<div ui-grid="{ data: reservationsData }" class="reservations-grid"></div>
+<div ui-grid="gridOptions" external-scopes="gridClickHandler" class="reservations-grid"></div>
 
  <modal ng-model="show_modal">
     <i class="close icon" ng-click="close_modal()"></i>
